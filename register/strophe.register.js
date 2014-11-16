@@ -246,6 +246,7 @@ Strophe.addConnectionPlugin('register', {
             }
             conn.register.fields[field.tagName.toLowerCase()] = Strophe.getText(field);
         }
+        conn.register.query = query;
         conn._changeConnectStatus(Strophe.Status.REGISTER, null);
         return false;
     },
